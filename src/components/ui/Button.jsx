@@ -1,4 +1,4 @@
-function Button({ children, onClick, type = "button", variant = "primary" }) {
+function Button({ children, handleClick, type = "button", variant = "primary" }) {
     const styles = {
         primary: "bg-blue-500 hover:bg-blue-600",
         danger: "bg-red-500 hover:bg-red-600",
@@ -8,7 +8,7 @@ function Button({ children, onClick, type = "button", variant = "primary" }) {
     return (
         <button
             type={type}
-            onClick={onClick}
+            onClick={handleClick}
             className={`rounded-md px-3.5 py-2.5 text-sm font-semibold text-white cursor-pointer transition-colors ${styles[variant]}`}
         >
             {children}

@@ -1,9 +1,34 @@
+import { useState } from "react";
 
-function AddTaskModal() {
+function AddTaskModal({closeModal, onSave}) {
+    const [task,setTask] = useState({
+        id: crypto.randomUUID(),
+        title: "",
+        description: "",
+        tags: [],
+        priority: "",
+        isFavorite: false
+    })
+
+    function handleChange(e) {
+        const name = e.target.name;
+        let value = e.target.value;
+        if (name === 'tags') {
+            value = value.split(',');
+        }
+        setTask({...task,[name]:value})
+    }
+
+    // function handleSubmit(e) {
+    //     e.preventDefault();
+    //     console.log(task);
+        
+    // }
+
     return (
         <>
-            <div className="bg-black bg-opacity-70 h-full w-full z-10 absolute top-0 left-0"></div>
-            <form className="mx-auto my-10 w-full max-w-185 rounded-xl border border-[#FEFBFB]/36 bg-[#191D26] p-9 max-md:px-4 lg:my-20 lg:p-11 z-10 absolute top-1/4 left-1/3">
+            <div className="bg-[#191D26]/80 h-full w-full z-10 absolute top-0 left-0"></div>
+            <form className="mx-auto my-10 w-full max-w-185 rounded-xl border border-[#FEFBFB]/36 bg-[#191D26] p-9 max-md:px-4 lg:my-20 lg:p-11 z-10 absolute top-[50%] left-[50%] translate-x-[-50%] translate-[-50%]">
                 <h2 className="mb-9 text-center text-2xl font-bold text-white lg:mb-11 lg:text-[28px]">
                     {/* {isAdd ? "Add New Task" : "Edit Task" } */}
                 </h2>
@@ -17,6 +42,8 @@ function AddTaskModal() {
                             name="title"
                             id="title"
                             required
+                            value={task.title}
+                            onChange={handleChange}
                         />
                     </div>
 
@@ -28,6 +55,8 @@ function AddTaskModal() {
                             name="description"
                             id="description"
                             required
+                            value={task.description}
+                            onChange={handleChange}
                         ></textarea>
                     </div>
 
@@ -40,6 +69,8 @@ function AddTaskModal() {
                                 name="tags"
                                 id="tags"
                                 required
+                                value={task.tags}
+                                onChange={handleChange}
                             />
                         </div>
 
@@ -50,6 +81,8 @@ function AddTaskModal() {
                                 name="priority"
                                 id="priority"
                                 required
+                                value={task.priority}
+                                onChange={handleChange}
                             >
                                 <option value="">Select Priority</option>
                                 <option value="Low">Low</option>
@@ -62,13 +95,15 @@ function AddTaskModal() {
 
                 <div className="mt-16 flex justify-between lg:mt-20">
                     <button
-                        className="rounded bg-red-600 px-4 py-2 text-white transition-all hover:opacity-80"
+                        className="cursor-pointer rounded bg-red-600 px-4 py-2 text-white transition-all hover:opacity-80"
+                        onClick={closeModal}
                     >
                         Close
                     </button>
                     <button
                         type="submit"
-                        className="rounded bg-blue-600 px-4 py-2 text-white transition-all hover:opacity-80"
+                        className="cursor-pointer rounded bg-blue-600 px-4 py-2 text-white transition-all hover:opacity-80"
+                        onClick={() => onSave(task)}
                     >
                         Save
                     </button>
