@@ -1,0 +1,55 @@
+<svg width="185" height="54" viewBox="0 0 185 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Clipboard gradient -->
+    <linearGradient id="clipboard-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+
+    <!-- Glowing emerald gradient for the checkmark badge -->
+    <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#05FFC5" />
+    </linearGradient>
+
+    <!-- Text "er" and highlight brand gradient -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+
+    <!-- Metallic silver text gradient -->
+    <linearGradient id="silver-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <!-- Shadow filter for clipboard and checkmark -->
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Clipboard Group with Shadow -->
+  <g filter="url(#soft-shadow)">
+    <!-- Clipboard body -->
+    <rect x="8" y="10" width="24" height="32" rx="5.5" fill="url(#clipboard-grad)" />
+    <!-- Clip -->
+    <rect x="16" y="7" width="8" height="4.5" rx="1.5" fill="#93C5FD" />
+    <!-- Clipboard lines -->
+    <line x1="13" y1="18" x2="27" y2="18" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="2" strokeLinecapp="round" />
+    <line x1="13" y1="24" x2="23" y2="24" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="2" strokeLinecapp="round" />
+    <line x1="13" y1="30" x2="19" y2="30" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="2" strokeLinecapp="round" />
+  </g>
+
+  <!-- Floating Checkmark Badge -->
+  <!-- Mask Circle to cut out the clipboard background -->
+  <circle cx="29" cy="31" r="10.5" fill="#191D26" />
+  <!-- Colored Circle Badge with Shadow -->
+  <circle cx="29" cy="31" r="8.5" fill="url(#badge-grad)" filter="url(#soft-shadow)" />
+  <!-- Checkmark Path -->
+  <path d="M25 31L28 34L33 28" stroke="#0F172A" stroke-width="2.2" strokeLinecapp="round" stroke-linejoin="round" />
+
+  <!-- Logo Text -->
+  <text x="46" y="36" fill="url(#silver-grad)" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" letter-spacing="-0.75" filter="drop-shadow(0px 1px 2.5px rgba(0,0,0,0.5))">Task<tspan fill="url(#text-grad)">er</tspan></text>
+</svg>
