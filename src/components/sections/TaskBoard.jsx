@@ -6,15 +6,45 @@ import TaskActions from "./TaskActions";
 import TaskList from "./TaskList";
 
 function TaskBoard() {
-    const defaultTask = {
-        id: crypto.randomUUID(),
-        title: "Learn React Native",
-        description: "Learn React Native by doing a project",
-        tags: ["react", "js", "html", "css"],
-        priority: "High",
-        isFavorite: false
-    }
-    const [tasks, setTask] = useState([defaultTask]);
+    const defaultTasks = [
+        {
+            id: crypto.randomUUID(),
+            title: "Build a React Task Manager",
+            description:
+            "Create a responsive task management application using React. Implement CRUD operations, filtering by priority, search functionality, and local storage for data persistence.",
+            tags: ["react", "javascript", "frontend", "localStorage"],
+            priority: "High",
+            isFavorite: true,
+        },
+        {
+            id: crypto.randomUUID(),
+            title: "Practice Data Structures",
+            description:
+            "Solve at least 5 problems on arrays, linked lists, stacks, and queues from LeetCode or Codeforces. Focus on improving problem-solving speed and understanding time complexity.",
+            tags: ["dsa", "algorithms", "leetcode", "cpp"],
+            priority: "Medium",
+            isFavorite: false,
+        },
+        {
+            id: crypto.randomUUID(),
+            title: "Design REST API with Node.js",
+            description:
+            "Build a RESTful API using Express.js and MongoDB. Implement authentication with JWT, input validation, error handling, and CRUD endpoints for user management.",
+            tags: ["nodejs", "express", "mongodb", "backend"],
+            priority: "High",
+            isFavorite: false,
+        },
+        {
+            id: crypto.randomUUID(),
+            title: "Read Clean Code",
+            description:
+            "Read Chapters 1–3 of 'Clean Code' by Robert C. Martin and summarize the key principles. Refactor an existing project by applying meaningful naming conventions and clean coding practices.",
+            tags: ["clean-code", "software-engineering", "book", "best-practices"],
+            priority: "Low",
+            isFavorite: false,
+        },
+    ];
+    const [tasks, setTask] = useState(defaultTasks);
     const [openModal, setOpenModal] = useState(false);
     const [taskToEdit, setTaskToEdit] = useState(null);
 
@@ -26,7 +56,7 @@ function TaskBoard() {
             const updatedTask = tasks.map((task) => task.id === newTask.id ? newTask : task);
             setTask(updatedTask);
         }
-        setOpenModal(false);
+    setOpenModal(false);
     }
 
     const handleDeleteAll = () => {
