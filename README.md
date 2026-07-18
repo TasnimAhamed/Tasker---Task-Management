@@ -1,16 +1,59 @@
-# React + Vite
+# 📝 Tasker - Task Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, high-fidelity, and responsive task board application. Built using **React 19**, **Vite 8**, and **Tailwind CSS v4**.
 
-Currently, two official plugins are available:
+🔗 **Main Header:** Effortlessly Organize, Prioritize, and Conquer Tasks.
+> *Your personal productivity ally for seamless goal achievement and stress-free task management.*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **Live URL:** [https://tasker-task-management.vercel.app/](https://tasker-task-management.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Organize and Categorize**: Manage tasks dynamically with descriptive titles, details, priority tags, and custom tags.
+- **Search & Filter**: Find any task instantly using the built-in search functionality matching title and description keywords.
+- **Favorite Tasks**: Bookmark important tasks with a star indicator to highlight your key items.
+- **Add & Edit Modals**: Fully validated form interactions for editing and adding tasks seamlessly.
+- **Modern Premium Design**: Sleek dark-mode aesthetic with custom typography, glowing card backdrops, and glassmorphic layout elements.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+- **React 19** - Component-based user interface library.
+- **Vite 8** - High-performance frontend tool and local dev server.
+- **Tailwind CSS v4** - Fast utility-first CSS framework with native `@tailwindcss/vite` plugin integrations.
+- **React Icons** - Custom vector icon components.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository and install dependencies
+Install the required node modules:
+```bash
+npm install
+```
+
+### 2. Run the development server
+Start Vite locally:
+```bash
+npm run dev
+```
+
+### 3. Build for production
+Generate optimized static production assets:
+```bash
+npm run build
+```
+
+---
+
+### 🚀 [HappyKoding](https://www.youtube.com/@happykoding07)
+*Let's learn, build, and grow together!*
+
+### 🤝 Let's Connect
+[[Codeforces](https://codeforces.com/profile/tasnim07)] | [[LinkedIn](https://www.linkedin.com/in/tasnimahmed20/)] | [[Facebook](https://www.facebook.com/tasnim.ahmed.20)]
+
+Live URL: https://tasker-task-management.vercel.app/
