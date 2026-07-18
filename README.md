@@ -55,5 +55,3 @@ npm run build
 
 ### 🤝 Let's Connect
 [[Codeforces](https://codeforces.com/profile/tasnim07)] | [[LinkedIn](https://www.linkedin.com/in/tasnimahmed20/)] | [[Facebook](https://www.facebook.com/tasnim.ahmed.20)]
-
-Live URL: https://tasker-task-management.vercel.app/
